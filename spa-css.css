@@ -1,0 +1,8 @@
+.spaDialog + .ui-widget-overlay, .spaDialog--no-tittle  .ui-dialog-titlebar {
+    display: none;
+}
+.spaDialog .ui-dialog-titlebar{
+    padding: calc(var(--jui-dialog-titlebar-padding-x)/4);
+    background-color: var(--ut-palette-primary);
+    color: var(--ut-header-text-color);
+}
