@@ -66,10 +66,14 @@ Create a Page with following `Page Properties` setting
 | `Page Mode`      | `Modal Dialog`  |
 | `Dialog Template`| `spaDialog`     |
 
-#### SPA Customization
+#### SPA Dialog Customization
 You can further modify the layout of SPA Dialogs be adding one or more classes from the following list in `Page Prperties > Dialog > CSS Classes` section. Classes must be seprated by `space`
 
-| Class Name         | Value           |
-|------------------|-----------------|
-| `Page Mode`      | `Modal Dialog`  |
-| `Dialog Template`| `spaDialog`     |
+| Class Name                | Purpose                                                                                                    | 
+|---------------------------|------------------------------------------------------------------------------------------------------------|
+| `spa-noTitle`             | This class will remove the titlebar from SPA Dialogs. You've to add close button to close it.              |
+| `spa-Draggable`           | This class will make the SPA dialog Draggable. By ddfault SPA Dialogs are not draggable.                   |
+| `spa-Resizable`           | This class will make the SPA dialog Resizable. By ddfault SPA Dialogs are not Resizable.                   |
+| `spa-showBreadcrumb`      | SPA Dialog will position after the `Breadcrumbs` area of Home Page.                                        |
+| `spa-showFooter`          | SPA Dialog will end before the Footer, making it visible all the time.                                     |
+
