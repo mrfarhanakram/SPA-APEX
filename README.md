@@ -78,6 +78,21 @@ You can further modify the layout of SPA Dialogs be adding one or more classes f
 | `spa-showFooter`          | SPA Dialog will end before the Footer, making it visible all the time.                                     |
 
 
+## Other Useful Functions
+
+### setDimentions()
+This Function will reset the size and positions of all the opened SPA Dialogs.
+
+```
+setDimentions();
+```
+
+### spaCloseAllDialog()
+This Function will close all the opened SPA Dialogs.
+
+```
+spaCloseAllDialog();
+```
 ### Author
 **Farhan Akram**  
 Sr. Oracle Apex Developer  
