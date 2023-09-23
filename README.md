@@ -1,5 +1,8 @@
+#### Introduction to SPA - Single Page Application
+A **single-page application (SPA)** is a web application or website that interacts with the user by dynamically rewriting the current web page with new data from the web server, instead of the default method of a web browser loading entire new pages. These days SPAs are in high demand due to **Smoother user experience** as compared to traditional method. SPAs can provide a more seamless and engaging user experience by allowing users to interact with the application without having to wait for pages to load.
+
 # SPA-APEX (Single Page Application in Oracle Apex)
-SPA-Apex make enables the Oracle Apex developers to build the Single Page Application in Oracle Apex 23.1.
+SPA-Apex make enables the Oracle Apex developers to build the applications similar to Single Page Application. This is not trully SPA, but user experience will be similar.
 
 Here is the list of files and their purposes:
 
