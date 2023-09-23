@@ -1,7 +1,7 @@
 # SPA-APEX
-Single Page Application in Oracle Apex 23.1
+SPA-Apex make enables the Oracle Apex developers to build the Single Page Application in Oracle Apex 23.1.
 
-Here is the list of files and there purpose:
+Here is the list of files and their purposes:
 
 | Name                     | Description                                                              |
 |--------------------------|--------------------------------------------------------------------------|
@@ -77,3 +77,9 @@ You can further modify the layout of SPA Dialogs be adding one or more classes f
 | `spa-showBreadcrumb`      | SPA Dialog will position after the `Breadcrumbs` area of Home Page.                                        |
 | `spa-showFooter`          | SPA Dialog will end before the Footer, making it visible all the time.                                     |
 
+
+### Author
+**Farhan Akram**  
+Sr. Oracle Apex Developer  
+mrfarhanakram@outlook.com  
+[Linkedln](https://www.linkedin.com/in/mrfarhanakram)
