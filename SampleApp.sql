@@ -33,23 +33,22 @@ prompt APPLICATION 276593 - SPA in Oracle Apex
 -- Application Export:
 --   Application:     276593
 --   Name:            SPA in Oracle Apex
---   Date and Time:   18:14 Saturday September 23, 2023
+--   Date and Time:   20:32 Saturday September 23, 2023
 --   Exported By:     FARHANAKRAM@SKM.ORG.PK
 --   Flashback:       0
 --   Export Type:     Application Export
---     Pages:                      6
+--     Pages:                     10
 --       Items:                    3
 --       Processes:                4
---       Regions:                  4
---       Buttons:                  2
---       Dynamic Actions:          1
+--       Regions:                  2
+--       Buttons:                  1
 --     Shared Components:
 --       Logic:
 --         Build Options:          1
 --       Navigation:
 --         Lists:                  3
 --         Breadcrumbs:            1
---           Entries:              2
+--           Entries:              1
 --       Security:
 --         Authentication:         1
 --         Authorization:          1
@@ -101,7 +100,7 @@ wwv_imp_workspace.create_flow(
 ,p_direction_right_to_left=>'N'
 ,p_flow_image_prefix => nvl(wwv_flow_application_install.get_image_prefix,'')
 ,p_authentication_id=>wwv_flow_imp.id(69087916270305196028)
-,p_application_tab_set=>0
+,p_application_tab_set=>1
 ,p_logo_type=>'T'
 ,p_logo_text=>'SPA in Oracle Apex'
 ,p_proxy_server=>nvl(wwv_flow_application_install.get_proxy,'')
@@ -118,7 +117,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'SPA-Apex'
 ,p_last_updated_by=>'FARHANAKRAM@SKM.ORG.PK'
-,p_last_upd_yyyymmddhh24miss=>'20230923180349'
+,p_last_upd_yyyymmddhh24miss=>'20230923203026'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>6
 ,p_print_server_type=>'INSTANCE'
@@ -167,32 +166,68 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
 wwv_flow_imp_shared.create_list_item(
- p_id=>wwv_flow_imp.id(69088212957920196173)
-,p_list_item_display_sequence=>20
-,p_list_item_link_text=>'MainPage'
-,p_list_item_link_target=>'f?p=&APP_ID.:2:&APP_SESSION.::&DEBUG.:::'
-,p_list_item_icon=>'fa-file-o'
-,p_list_item_current_type=>'TARGET_PAGE'
-);
-wwv_flow_imp_shared.create_list_item(
  p_id=>wwv_flow_imp.id(69088226776985200526)
 ,p_list_item_display_sequence=>30
-,p_list_item_link_text=>'Dialog 1'
-,p_list_item_link_target=>'f?p=&APP_ID.:3:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_link_text=>'Default'
+,p_list_item_link_target=>'f?p=&APP_ID.:3:&SESSION.::&DEBUG.::::'
 ,p_list_item_icon=>'fa-file-o'
-,p_parent_list_item_id=>wwv_flow_imp.id(69088212957920196173)
+,p_parent_list_item_id=>wwv_flow_imp.id(69088211469224196171)
 ,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
 ,p_list_item_current_for_pages=>'3'
 );
 wwv_flow_imp_shared.create_list_item(
- p_id=>wwv_flow_imp.id(69087774997497959891)
+ p_id=>wwv_flow_imp.id(69249171736162131022)
 ,p_list_item_display_sequence=>40
-,p_list_item_link_text=>'Dialog 2'
+,p_list_item_link_text=>'spa-noTitle'
 ,p_list_item_link_target=>'f?p=&APP_ID.:4:&APP_SESSION.::&DEBUG.:::'
-,p_list_item_icon=>'fa-file-o'
-,p_parent_list_item_id=>wwv_flow_imp.id(69088212957920196173)
+,p_parent_list_item_id=>wwv_flow_imp.id(69088211469224196171)
 ,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
 ,p_list_item_current_for_pages=>'4'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(69249424977559377801)
+,p_list_item_display_sequence=>50
+,p_list_item_link_text=>'spa-Draggable'
+,p_list_item_link_target=>'f?p=&APP_ID.:5:&APP_SESSION.::&DEBUG.:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(69088211469224196171)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'5'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(69249936765091137533)
+,p_list_item_display_sequence=>60
+,p_list_item_link_text=>'spa-Resizable'
+,p_list_item_link_target=>'f?p=&APP_ID.:6:&APP_SESSION.::&DEBUG.:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(69088211469224196171)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'6'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(69250363413234383481)
+,p_list_item_display_sequence=>70
+,p_list_item_link_text=>'spa-showBreadcrumb'
+,p_list_item_link_target=>'f?p=&APP_ID.:7:&APP_SESSION.::&DEBUG.:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(69088211469224196171)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'7'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(69250370208916386454)
+,p_list_item_display_sequence=>80
+,p_list_item_link_text=>'spa-showFooter'
+,p_list_item_link_target=>'f?p=&APP_ID.:8:&APP_SESSION.::&DEBUG.:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(69088211469224196171)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'8'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(69250387976175391957)
+,p_list_item_display_sequence=>90
+,p_list_item_link_text=>'Multiples'
+,p_list_item_link_target=>'f?p=&APP_ID.:9:&APP_SESSION.::&DEBUG.:::'
+,p_parent_list_item_id=>wwv_flow_imp.id(69088211469224196171)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'9'
 );
 end;
 /
@@ -712,12 +747,6 @@ wwv_flow_imp_shared.create_menu_option(
 ,p_short_name=>'Home'
 ,p_link=>'f?p=&APP_ID.:1:&APP_SESSION.::&DEBUG.:::'
 ,p_page_id=>1
-);
-wwv_flow_imp_shared.create_menu_option(
- p_id=>wwv_flow_imp.id(69088214125406196174)
-,p_short_name=>'MainPage'
-,p_link=>'f?p=&APP_ID.:2:&APP_SESSION.::&DEBUG.:::'
-,p_page_id=>2
 );
 end;
 /
@@ -17806,93 +17835,21 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'13'
 ,p_last_updated_by=>'FARHANAKRAM@SKM.ORG.PK'
-,p_last_upd_yyyymmddhh24miss=>'20230923084805'
+,p_last_upd_yyyymmddhh24miss=>'20230923202052'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(69088212375101196172)
-,p_plug_name=>'SPA-Test'
+,p_plug_name=>'SPA Apex Home'
+,p_region_css_classes=>'spa-home'
 ,p_region_template_options=>'#DEFAULT#'
-,p_escape_on_http_output=>'Y'
-,p_plug_template=>wwv_flow_imp.id(69087986554005196059)
+,p_plug_template=>wwv_flow_imp.id(69087953267338196046)
 ,p_plug_display_sequence=>10
 ,p_plug_display_point=>'REGION_POSITION_01'
+,p_plug_source=>'<h1> Page Header Area </h1>'
 ,p_plug_query_num_rows=>15
-,p_region_image=>'#APP_FILES#icons/app-icon-512.png'
 ,p_attribute_01=>'N'
 ,p_attribute_02=>'HTML'
 ,p_attribute_03=>'Y'
-);
-wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(69088215238663196175)
-,p_plug_name=>'Page Navigation'
-,p_region_template_options=>'#DEFAULT#'
-,p_component_template_options=>'#DEFAULT#:u-colors:t-Cards--featured t-Cards--block force-fa-lg:t-Cards--displayIcons:t-Cards--4cols:t-Cards--hideBody:t-Cards--animColorFill'
-,p_escape_on_http_output=>'Y'
-,p_plug_template=>wwv_flow_imp.id(69087953267338196046)
-,p_plug_display_sequence=>30
-,p_list_id=>wwv_flow_imp.id(69088214586097196175)
-,p_plug_source_type=>'NATIVE_LIST'
-,p_list_template_id=>wwv_flow_imp.id(69088068803065196093)
-,p_plug_query_num_rows=>15
-);
-end;
-/
-prompt --application/pages/page_00002
-begin
-wwv_flow_imp_page.create_page(
- p_id=>2
-,p_name=>'MainPage'
-,p_alias=>'MAINPAGE'
-,p_step_title=>'MainPage'
-,p_autocomplete_on_off=>'OFF'
-,p_page_css_classes=>'spa-home'
-,p_page_template_options=>'#DEFAULT#'
-,p_protection_level=>'C'
-,p_page_component_map=>'11'
-,p_last_updated_by=>'FARHANAKRAM@SKM.ORG.PK'
-,p_last_upd_yyyymmddhh24miss=>'20230923175825'
-);
-wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(69212177049381267502)
-,p_plug_name=>'Page Header'
-,p_region_template_options=>'#DEFAULT#'
-,p_plug_template=>wwv_flow_imp.id(69087953267338196046)
-,p_plug_display_sequence=>10
-,p_plug_display_point=>'REGION_POSITION_01'
-,p_plug_source=>'<h1>Page Header</h1>'
-,p_attribute_01=>'N'
-,p_attribute_02=>'HTML'
-);
-wwv_flow_imp_page.create_page_button(
- p_id=>wwv_flow_imp.id(69212177110206267503)
-,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_imp.id(69212177049381267502)
-,p_button_name=>'Close_All'
-,p_button_action=>'DEFINED_BY_DA'
-,p_button_template_options=>'#DEFAULT#:t-Button--iconLeft'
-,p_button_template_id=>wwv_flow_imp.id(69088093124047196104)
-,p_button_image_alt=>'Close All'
-,p_button_position=>'NEXT'
-,p_warn_on_unsaved_changes=>null
-);
-wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(69212177266633267504)
-,p_name=>'New'
-,p_event_sequence=>10
-,p_triggering_element_type=>'BUTTON'
-,p_triggering_button_id=>wwv_flow_imp.id(69212177110206267503)
-,p_bind_type=>'bind'
-,p_execution_type=>'IMMEDIATE'
-,p_bind_event_type=>'click'
-);
-wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(69212177308322267505)
-,p_event_id=>wwv_flow_imp.id(69212177266633267504)
-,p_event_result=>'TRUE'
-,p_action_sequence=>10
-,p_execute_on_page_init=>'N'
-,p_action=>'NATIVE_JAVASCRIPT_CODE'
-,p_attribute_01=>'spaCloseAllDialog();'
 );
 end;
 /
@@ -17900,17 +17857,17 @@ prompt --application/pages/page_00003
 begin
 wwv_flow_imp_page.create_page(
  p_id=>3
-,p_name=>'Dialog 1'
-,p_alias=>'DIALOG-1'
+,p_name=>'spa-default'
+,p_alias=>'SPA-DEFAULT'
 ,p_page_mode=>'MODAL'
-,p_step_title=>'Dialog 1'
+,p_step_title=>'spa-default'
 ,p_autocomplete_on_off=>'OFF'
 ,p_step_template=>wwv_flow_imp.id(69092737035719295039)
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
 ,p_page_component_map=>'11'
 ,p_last_updated_by=>'FARHANAKRAM@SKM.ORG.PK'
-,p_last_upd_yyyymmddhh24miss=>'20230923173411'
+,p_last_upd_yyyymmddhh24miss=>'20230923202318'
 );
 end;
 /
@@ -17918,10 +17875,67 @@ prompt --application/pages/page_00004
 begin
 wwv_flow_imp_page.create_page(
  p_id=>4
-,p_name=>'Dialog 2'
-,p_alias=>'DIALOG-2'
+,p_name=>'spa-noTitle'
+,p_alias=>'SPA-NOTITLE'
 ,p_page_mode=>'MODAL'
-,p_step_title=>'Dialog 2'
+,p_step_title=>'spa-noTitle'
+,p_autocomplete_on_off=>'OFF'
+,p_step_template=>wwv_flow_imp.id(69092737035719295039)
+,p_page_template_options=>'#DEFAULT#'
+,p_dialog_css_classes=>'spa-noTitle'
+,p_protection_level=>'C'
+,p_page_component_map=>'11'
+,p_last_updated_by=>'FARHANAKRAM@SKM.ORG.PK'
+,p_last_upd_yyyymmddhh24miss=>'20230923202841'
+);
+end;
+/
+prompt --application/pages/page_00005
+begin
+wwv_flow_imp_page.create_page(
+ p_id=>5
+,p_name=>'spa-Draggable'
+,p_alias=>'SPA-DRAGGABLE'
+,p_page_mode=>'MODAL'
+,p_step_title=>'spa-Draggable'
+,p_autocomplete_on_off=>'OFF'
+,p_step_template=>wwv_flow_imp.id(69092737035719295039)
+,p_page_template_options=>'#DEFAULT#'
+,p_dialog_css_classes=>'spa-Draggable'
+,p_protection_level=>'C'
+,p_page_component_map=>'11'
+,p_last_updated_by=>'FARHANAKRAM@SKM.ORG.PK'
+,p_last_upd_yyyymmddhh24miss=>'20230923202859'
+);
+end;
+/
+prompt --application/pages/page_00006
+begin
+wwv_flow_imp_page.create_page(
+ p_id=>6
+,p_name=>'spa-Resizable'
+,p_alias=>'SPA-RESIZABLE'
+,p_page_mode=>'MODAL'
+,p_step_title=>'spa-Resizable'
+,p_autocomplete_on_off=>'OFF'
+,p_step_template=>wwv_flow_imp.id(69092737035719295039)
+,p_page_template_options=>'#DEFAULT#'
+,p_dialog_css_classes=>'spa-Resizable'
+,p_protection_level=>'C'
+,p_page_component_map=>'11'
+,p_last_updated_by=>'FARHANAKRAM@SKM.ORG.PK'
+,p_last_upd_yyyymmddhh24miss=>'20230923202911'
+);
+end;
+/
+prompt --application/pages/page_00007
+begin
+wwv_flow_imp_page.create_page(
+ p_id=>7
+,p_name=>'spa-showBreadcrumb'
+,p_alias=>'SPA-SHOWBREADCRUMB'
+,p_page_mode=>'MODAL'
+,p_step_title=>'spa-showBreadcrumb'
 ,p_autocomplete_on_off=>'OFF'
 ,p_step_template=>wwv_flow_imp.id(69092737035719295039)
 ,p_page_template_options=>'#DEFAULT#'
@@ -17929,7 +17943,45 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'11'
 ,p_last_updated_by=>'FARHANAKRAM@SKM.ORG.PK'
-,p_last_upd_yyyymmddhh24miss=>'20230923175222'
+,p_last_upd_yyyymmddhh24miss=>'20230923202928'
+);
+end;
+/
+prompt --application/pages/page_00008
+begin
+wwv_flow_imp_page.create_page(
+ p_id=>8
+,p_name=>'spa-showFooter'
+,p_alias=>'SPA-SHOWFOOTER'
+,p_page_mode=>'MODAL'
+,p_step_title=>'spa-showFooter'
+,p_autocomplete_on_off=>'OFF'
+,p_step_template=>wwv_flow_imp.id(69092737035719295039)
+,p_page_template_options=>'#DEFAULT#'
+,p_dialog_css_classes=>'spa-showFooter'
+,p_protection_level=>'C'
+,p_page_component_map=>'11'
+,p_last_updated_by=>'FARHANAKRAM@SKM.ORG.PK'
+,p_last_upd_yyyymmddhh24miss=>'20230923202944'
+);
+end;
+/
+prompt --application/pages/page_00009
+begin
+wwv_flow_imp_page.create_page(
+ p_id=>9
+,p_name=>'Multiples'
+,p_alias=>'MULTIPLES'
+,p_page_mode=>'MODAL'
+,p_step_title=>'Multiples'
+,p_autocomplete_on_off=>'OFF'
+,p_step_template=>wwv_flow_imp.id(69092737035719295039)
+,p_page_template_options=>'#DEFAULT#'
+,p_dialog_css_classes=>'spa-Draggable spa-Resizable spa-showBreadcrumb  spa-showFooter'
+,p_protection_level=>'C'
+,p_page_component_map=>'11'
+,p_last_updated_by=>'FARHANAKRAM@SKM.ORG.PK'
+,p_last_upd_yyyymmddhh24miss=>'20230923203026'
 );
 end;
 /
