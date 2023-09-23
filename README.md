@@ -1,4 +1,4 @@
-# SPA-APEX
+# SPA-APEX (Single Page Application in Oracle Apex)
 SPA-Apex make enables the Oracle Apex developers to build the Single Page Application in Oracle Apex 23.1.
 
 Here is the list of files and their purposes:
