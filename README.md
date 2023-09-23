@@ -21,21 +21,55 @@ First, download the following files:
 
 ### 1. spa-js.js
 1. Donwload from gitHub.
-2. Upload in Static Workspace Files(Application > Shared Components > Static Workspace Files) of your Application.
+2. Upload in Static Workspace Files `Application > Shared Components > Static Workspace Files` of your Application.
 3. Copy the Reference/Path
-4. Add the Reference/Path in (Application > Shared Components > User Interfaces > JavaScript > File URLs)
+4. Add the Reference/Path in `Application > Shared Components > User Interfaces > JavaScript > File URLs`
 
 ### 2. spa-css.css
 1. Donwload from gitHub.
-2. Upload in Static Workspace Files(Application > Shared Components > Static Workspace Files) of your Application.
+2. Upload in Static Workspace Files `Application > Shared Components > Static Workspace Files` of your Application.
 3. Copy the Reference/Path
-4. Add the Reference/Path in (Application > Shared Components > User Interfaces > CSS > File URLs)
+4. Add the Reference/Path in `Application > Shared Components > User Interfaces > CSS > File URLs`
 
 ### 3. Creating Page Template
-1. Go to Application > Shared Components > Templates
-2. Copy "Modal Dialog" as "spaDialog"
-3. Scroll to "Dialog Initialization Code" section
-4. Replace "apex.theme42.dialog" with "spaDialog"
+1. Go to `Application > Shared Components > Templates`
+2. Copy `Modal Dialog` as `spaDialog`
+3. Scroll to **Dialog Initialization Code** section
+4. Replace `apex.theme42.dialog` with `spaDialog`
+5. Save the Template
+
+All done!
 
 ## 📖 Usage
-This technique can be used to develop a pretty SPA (Single Page Application) in Oracle Apex.
+If you've completed the installation steps, you are ready to use it.
+
+### Home Page
+This is a Index/Home/Calling page that will remain visible all the time. 
+
+#### To Create a Home Page
+Create a Page with following `Page Properties` setting
+
+| Property       | Value           |
+|----------------|-----------------|
+| `Page Mode`    | `Normal`        |
+| `CSS Classes`  | `spa-home`      |
+
+
+### SPA Dialogs
+SPA Dialogs are the pages called over the Home page.
+
+#### To Create a SPA Dialog Page
+Create a Page with following `Page Properties` setting
+
+| Property         | Value           |
+|------------------|-----------------|
+| `Page Mode`      | `Modal Dialog`  |
+| `Dialog Template`| `spaDialog`     |
+
+#### SPA Customization
+You can further modify the layout of SPA Dialogs be adding one or more classes from the following list in `Page Prperties > Dialog > CSS Classes` section. Classes must be seprated by `space`
+
+| Class Name         | Value           |
+|------------------|-----------------|
+| `Page Mode`      | `Modal Dialog`  |
+| `Dialog Template`| `spaDialog`     |
