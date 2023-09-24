@@ -33,7 +33,7 @@ prompt APPLICATION 276593 - SPA in Oracle Apex
 -- Application Export:
 --   Application:     276593
 --   Name:            SPA in Oracle Apex
---   Date and Time:   20:32 Saturday September 23, 2023
+--   Date and Time:   10:59 Sunday September 24, 2023
 --   Exported By:     FARHANAKRAM@SKM.ORG.PK
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -50,7 +50,7 @@ prompt APPLICATION 276593 - SPA in Oracle Apex
 --         Breadcrumbs:            1
 --           Entries:              1
 --       Security:
---         Authentication:         1
+--         Authentication:         2
 --         Authorization:          1
 --       User Interface:
 --         Themes:                 1
@@ -99,8 +99,8 @@ wwv_imp_workspace.create_flow(
 ,p_timestamp_tz_format=>'DS'
 ,p_direction_right_to_left=>'N'
 ,p_flow_image_prefix => nvl(wwv_flow_application_install.get_image_prefix,'')
-,p_authentication_id=>wwv_flow_imp.id(69087916270305196028)
-,p_application_tab_set=>1
+,p_authentication_id=>wwv_flow_imp.id(69324411077128977247)
+,p_application_tab_set=>0
 ,p_logo_type=>'T'
 ,p_logo_text=>'SPA in Oracle Apex'
 ,p_proxy_server=>nvl(wwv_flow_application_install.get_proxy,'')
@@ -117,7 +117,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'SPA-Apex'
 ,p_last_updated_by=>'FARHANAKRAM@SKM.ORG.PK'
-,p_last_upd_yyyymmddhh24miss=>'20230923203026'
+,p_last_upd_yyyymmddhh24miss=>'20230924041849'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>6
 ,p_print_server_type=>'INSTANCE'
@@ -14728,6 +14728,18 @@ wwv_flow_imp_shared.create_authentication(
 ,p_name=>'Oracle APEX Accounts'
 ,p_scheme_type=>'NATIVE_APEX_ACCOUNTS'
 ,p_invalid_session_type=>'LOGIN'
+,p_use_secure_cookie_yn=>'N'
+,p_ras_mode=>0
+);
+end;
+/
+prompt --application/shared_components/security/authentications/openforall
+begin
+wwv_flow_imp_shared.create_authentication(
+ p_id=>wwv_flow_imp.id(69324411077128977247)
+,p_name=>'OpenForAll'
+,p_scheme_type=>'NATIVE_DAD'
+,p_attribute_01=>'nobody'
 ,p_use_secure_cookie_yn=>'N'
 ,p_ras_mode=>0
 );
