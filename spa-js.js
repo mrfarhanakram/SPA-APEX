@@ -19,7 +19,6 @@ function getSpaDimentions(spaObject) {
     };
 }
 function setDimentions(spaObject, recalc) {
-    console.log(spaObject.currDialog);
     if (recalc) spaObject.dimension = getSpaDimentions(spaObject);
     let dm = spaObject.dimension,
         co = spaObject.currDialog ? spaObject.currDialog : $(spaObject.mainWindow.document).find('.spaDialog:not([data-url])');
