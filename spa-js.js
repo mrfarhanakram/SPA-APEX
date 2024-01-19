@@ -66,6 +66,16 @@ function spaDialog(url, options, classes, trigElem) {
             options.position = 'left' + spaObject.dimension.left + ' top' + spaObject.dimension.top;
             options.draggable = spaObject.options.draggable ? true : false;
             options.resizable = spaObject.options.resizable ? true : false;
+            options.open = function () {
+                if ($.ui && $.ui.dialog && !$.ui.dialog.prototype._allowInteractionRemapped && $(this).closest(".ui-dialog").length) {
+                    if ($.ui.dialog.prototype._allowInteraction) {
+                        $.ui.dialog.prototype._allowInteraction = function (e) {
+                            return true;
+                        };
+                        $.ui.dialog.prototype._allowInteractionRemapped = true;
+                    }
+                }
+            };
         }
     }
     if (spaObject.isSpaMode) {
